@@ -26,3 +26,12 @@ table {
   .different-width td:nth-child(3) {
     width: 300px;
   }
+
+  .different-width-details td:nth-child(1),
+  .different-width-details td:nth-child(2) {
+    width: 50px; 
+  }
+  
+  .different-width-details td:nth-child(3) {
+    width: 5px;
+  }

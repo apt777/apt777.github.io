@@ -119,6 +119,10 @@ hr {
     padding: 30px;
 }
 
+.tm-detail-link {
+    color: rgb(66, 153, 230);
+}
+
 .tm-nav-item:hover .tm-nav-link,
 .tm-nav-item.active .tm-nav-link
  {
@@ -155,17 +159,30 @@ ul {
 .tm-social-link {
     display: inline-block;
     background-color: white;    
-    font-size: 1.4rem;
-    width: 50px;
-    height: 50px;
+    font-size: 2.5rem;
+    width: 75px;
+    height: 75px;
     text-align: center;
-    padding-top: 8px; 
+    padding-top: 15px; 
     margin-right: 15px;   
     margin-bottom: 15px;
 }
 
+.tm-social-link-post {
+    background-color: white;    
+    font-size: 2.5rem;
+    width: 75px;
+    height: 75px;
+    text-align: right;
+}
+
 .tm-social-icon { 
     color: #0CC;    
+    transition: all 0.3s ease;
+}
+
+.tm-social-icon-post { 
+    color: rgb(0, 0, 0);    
     transition: all 0.3s ease;
 }
 

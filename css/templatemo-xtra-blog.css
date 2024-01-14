@@ -276,6 +276,18 @@ ul {
     margin-bottom: 20px;
 }
 
+.post-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    background-color: #8bbec9dd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 .tm-h3 {
     font-size: 1.3rem;
     color: #999;

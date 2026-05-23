@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Security and deployment direction for a private personal workspace.">
+  <title>Security Notes</title>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">GM</span>
+        <span class="brand-copy">
+          <strong>Personal Workspace</strong>
+          <small>Private journaling home</small>
+        </span>
+      </a>
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="records.html">Records</a>
+        <a class="nav-link is-active" href="security.html">Security Notes</a>
+      </nav>
+    </header>
+
+    <main class="doc-page panel">
+      <p class="eyebrow">Security direction</p>
+      <h1>이 사이트를 정말 "나만 보는 공간"으로 만들려면</h1>
+      <p>
+        지금 이 저장소는 정적 사이트입니다. 그래서 HTML, CSS, JS만으로는 안전한 로그인이나 접근 통제를
+        직접 구현할 수 없습니다. 진짜 보안은 배포 앞단에서 인증을 강제해야 합니다.
+      </p>
+
+      <h2>핵심 원칙</h2>
+      <ul class="check-list">
+        <li>정적 파일 자체는 누구나 요청할 수 있다고 가정합니다.</li>
+        <li>클라이언트 비밀번호 입력창, 숨김 링크, `robots.txt`는 보안 수단이 아닙니다.</li>
+        <li>민감한 기록은 인증 프록시나 사설 네트워크 뒤에 둬야 합니다.</li>
+      </ul>
+
+      <h2>권장 배포 방향</h2>
+      <p>
+        가장 현실적인 방향은 정적 파일은 그대로 유지하고, 그 앞에 인증 레이어를 두는 것입니다.
+        이렇게 하면 디자인과 콘텐츠 구조는 단순하게 유지하면서 접근 통제는 별도 계층에서 강하게 가져갈 수 있습니다.
+      </p>
+
+      <h3>옵션 A. 인증 게이트 뒤에 공개 URL로 두기</h3>
+      <p>
+        외부에서도 접속하고 싶다면, 정적 호스팅 앞에 인증 프록시를 두고 내 계정만 통과시키는 방식이 잘 맞습니다.
+      </p>
+
+      <h3>옵션 B. 아예 사설 네트워크 안에 두기</h3>
+      <p>
+        가장 보수적인 방법은 사이트를 공용 인터넷에 노출하지 않고, 내 기기에서만 접근 가능한 사설 환경에 두는 것입니다.
+      </p>
+
+      <h2>GitHub Pages 관련 메모</h2>
+      <p>
+        개인용 GitHub Pages는 진짜 비공개 일지 사이트 용도로는 맞지 않습니다. 이 저장소는 기록 허브로 개조할 수는 있지만,
+        최종 배포는 별도의 인증 가능한 환경으로 옮기는 편이 안전합니다.
+      </p>
+
+      <p class="page-footer-note">
+        더 자세한 운영 메모는 <a class="text-link" href="docs/private-deployment.md">docs/private-deployment.md</a>에 정리해두었습니다.
+      </p>
+    </main>
+  </div>
+</body>
+</html>

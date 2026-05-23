@@ -1,107 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lee Geunmin</title>
-	<link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
-	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/templatemo-xtra-blog.css" rel="stylesheet">
-<!--
-    
-TemplateMo 553 Xtra Blog
-
-https://templatemo.com/tm-553-xtra-blog
-
--->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Private workspace prototype for personal notes, study logs, and development records.">
+  <title>Personal Workspace</title>
+  <link rel="stylesheet" href="css/site.css">
+  <script defer src="js/site-data.js"></script>
+  <script defer src="js/site-app.js"></script>
 </head>
-<body>
-	<header class="tm-header" id="tm-header">
-        <div class="tm-header-wrapper">
-            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="tm-site-header">           
-                <h1 class="text-center">이근민</h1>
-            </div>
-            <nav class="tm-nav" id="tm-nav">            
-                <ul>
-                    <li class="tm-nav-item active"><a href="index.html" class="tm-nav-link">
-                        <i class="fas fa-home"></i>
-                        About Me
-                    </a></li>
-                    <li class="tm-nav-item"><a href="post.html" class="tm-nav-link">
-                        <i class="fas fa-pen"></i>
-                        Project
-                    </a></li>
-                </ul>
-            </nav>
-            <div class="tm-mb-65">
-                
-                <a href="https://studyrepo.tistory.com/" class="tm-social-link">
-                    <i class="fas fa-book tm-social-icon"></i>
-                </a>
-                <a href="https://github.com/apt777" class="tm-social-link">
-                    <i class="fab fa-github tm-social-icon"></i>
-                </a>
-
-            </div>
-            <li class="tm-nav-language"><a href="index.html" class="tm-nav-language-link">
-                한국어
-            </a></li>
-            <li class="tm-nav-language"><a href="index_ja.html" class="tm-nav-language-link">
-                日本語
-            </a></li>
-        </div>
+<body data-page="home">
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">GM</span>
+        <span class="brand-copy">
+          <strong>Personal Workspace</strong>
+          <small>Private journaling home</small>
+        </span>
+      </a>
+      <nav class="nav">
+        <a class="nav-link is-active" href="index.html">Home</a>
+        <a class="nav-link" href="records.html">Records</a>
+        <a class="nav-link" href="security.html">Security Notes</a>
+      </nav>
     </header>
-    <div class="container-fluid">
-        <main class="tm-main">          
-            <div class="row tm-row">
-                <div class="col-12">
-                    <hr class="tm-hr-primary tm-mb-55">
-                </div>
-            </div>
-            <div class="row tm-row">
-                <div class="col-12">
-                    <div class="tm-post-full">                    
-                        <div class="mb-4">
-                            
-                            <h2 class="pt-2 tm-color-primary tm-post-title">Profile</h2>
-                            Birth : 1998. 02. 10<br>Tel : 010 - 5122 - 0365
-                            <br>
 
-                            <br><br>
+    <main class="page">
+      <section class="hero panel">
+        <div class="hero-copy">
+          <p class="eyebrow">Redesign in progress</p>
+          <h1>이 홈페이지를 공개 포트폴리오가 아니라, 나만 쓰는 기록 허브로 다시 만듭니다.</h1>
+          <p class="lede">
+            예전 템플릿 구조는 걷어내고, 개발 일지와 언어 공부 기록을 쌓는 개인 작업 공간으로
+            개조했습니다. 앞으로 카테고리가 늘어나도 데이터만 추가하면 바로 확장할 수 있게
+            바꿔두었습니다.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="records.html">기록 공간 보기</a>
+            <a class="button button-secondary" href="#security">보안 방향 보기</a>
+          </div>
+        </div>
+        <aside class="hero-aside">
+          <div class="status-card">
+            <p class="status-label">Current mode</p>
+            <p class="status-value">Private-first</p>
+            <p class="status-text">
+              민감한 내용은 이 정적 사이트에 직접 넣지 않고, 인증 게이트 뒤에서만 보이도록 운영하는
+              방향을 기본 전제로 둡니다.
+            </p>
+          </div>
+        </aside>
+      </section>
 
-                            <h2 class="pt-2 tm-color-primary tm-post-title">Education & Others</h2>
-                            도원고등학교 졸업 / 2014.03 ~ 2016.02<br>대구가톨릭대학교 컴퓨터공학부 학사 4년 졸업 / 2017.03 ~ 2023.02 / 평점 4.17 / 4.5
-                            <br>공군 병 785기 만기전역 / 2018.02 ~ 2020.01
+      <section class="stats-grid" id="overview-stats"></section>
 
-                            <br><br><br>
+      <section class="panel section-block">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Spaces</p>
+            <h2>기록 공간</h2>
+          </div>
+          <a class="text-link" href="records.html">전체 보기</a>
+        </div>
+        <div class="space-grid" id="home-spaces"></div>
+      </section>
 
-                            <h2 class="pt-2 tm-color-primary tm-post-title">License & Skill</h2>
-                            정보처리기사 / 2022.09 <br>
-                            JLPT N2 / 2022.08 <br>
-                            TOEIC SPEAKING / IM2 / 2022.11<br>
-                            TOEIC / 810 / 2023.10<br>
+      <section class="panel section-block">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Operating rules</p>
+            <h2>이 사이트를 쓰는 원칙</h2>
+          </div>
+        </div>
+        <div class="rules-grid">
+          <article class="rule-card">
+            <h3>1. 기록은 짧고 자주</h3>
+            <p>매번 완성된 글을 쓰기보다, 배운 점과 막힌 점을 짧게 남기는 구조로 갑니다.</p>
+          </article>
+          <article class="rule-card">
+            <h3>2. 카테고리는 계속 추가 가능</h3>
+            <p>개발, 영어, 중국어 외에도 독서, 운동, 프로젝트 회고 같은 공간을 쉽게 늘릴 수 있습니다.</p>
+          </article>
+          <article class="rule-card">
+            <h3>3. 민감한 데이터는 분리</h3>
+            <p>정적 HTML은 인증을 직접 처리하지 못하므로, 중요한 기록은 반드시 보호된 배포 환경 뒤에 둡니다.</p>
+          </article>
+        </div>
+      </section>
 
-                            <br><br><br>
-
-                            <h2 class="pt-2 tm-color-primary tm-post-title">Programming </h2>
-                            C / C++ <br> JAVA <br> Javascript / HTML / CSS / XML <br>React<br> Linux <br><br> Git / Github <br>Slack<br>VS Code
-                            
-
-                            <hr>
-                            <span class="d-block text-right tm-color-primary">Creative . Design . Business<br> update : 2024.01.26</span>
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/templatemo-script.js"></script>
+      <section class="panel section-block" id="security">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Security</p>
+            <h2>보안 메모</h2>
+          </div>
+        </div>
+        <div class="security-callout">
+          <p>
+            이 저장소는 정적 사이트라서 코드만으로 "나만 로그인해서 보는 홈페이지"를 완성할 수는 없습니다.
+            진짜 보안은 배포 앞단에서 인증을 강제해야 합니다.
+          </p>
+          <ul class="check-list">
+            <li>정적 파일은 그대로 두고, 배포는 인증 프록시나 사설 네트워크 뒤에 둡니다.</li>
+            <li>GitHub Pages 개인 사이트는 기본적으로 공개 성격이라, 개인 전용 홈페이지 용도에는 맞지 않습니다.</li>
+            <li>실제 배포 전에는 `docs/private-deployment.md` 기준으로 방식을 정하면 됩니다.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

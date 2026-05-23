@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Track development notes, English study, Chinese study, and future personal records.">
+  <title>Records</title>
+  <link rel="stylesheet" href="css/site.css">
+  <script defer src="js/site-data.js"></script>
+  <script defer src="js/site-app.js"></script>
+</head>
+<body data-page="records">
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">GM</span>
+        <span class="brand-copy">
+          <strong>Personal Workspace</strong>
+          <small>Private journaling home</small>
+        </span>
+      </a>
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link is-active" href="records.html">Records</a>
+        <a class="nav-link" href="security.html">Security Notes</a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="panel page-banner">
+        <p class="eyebrow">Records hub</p>
+        <h1>기록 카테고리를 늘려가며 쓰는 개인 아카이브</h1>
+        <p class="lede">
+          지금은 개발 일지, 영어 공부, 중국어 공부를 넣어두었고 나중에는 다른 카테고리를 더
+          추가할 수 있도록 데이터 기반으로 구성했습니다.
+        </p>
+      </section>
+
+      <section class="records-layout">
+        <div class="records-main">
+          <section class="panel section-block">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Categories</p>
+                <h2>공간 목록</h2>
+              </div>
+            </div>
+            <div class="space-grid" id="records-spaces"></div>
+          </section>
+
+          <section class="panel section-block">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Recent notes</p>
+                <h2>최근 기록</h2>
+              </div>
+            </div>
+            <div class="entry-list" id="recent-entries"></div>
+          </section>
+        </div>
+
+        <aside class="records-side">
+          <section class="panel section-block">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Template</p>
+                <h2>기록 포맷</h2>
+              </div>
+            </div>
+            <div class="template-card">
+              <p class="template-title">한 번 기록할 때 남길 것</p>
+              <ul class="check-list">
+                <li>오늘 무엇을 했는지</li>
+                <li>막힌 점과 해결 단서</li>
+                <li>다음에 바로 이어서 할 일</li>
+                <li>기억해둘 표현이나 개념</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="panel section-block">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">How to extend</p>
+                <h2>카테고리 추가</h2>
+              </div>
+            </div>
+            <p class="body-copy">
+              새 카테고리는 `js/site-data.js` 안의 `recordSpaces` 배열에 항목 하나만 추가하면
+              자동으로 목록과 상세 페이지에 반영됩니다.
+            </p>
+          </section>
+        </aside>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

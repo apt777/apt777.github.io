@@ -1,6 +1,6 @@
 # apt777.github.io
 
-This repository has been reworked into a static personal workspace prototype.
+Static portfolio site with Korean and Japanese pages.
 
 ## Local development
 
@@ -13,35 +13,19 @@ npm run dev
 Then open:
 
 - `http://127.0.0.1:4173/index.html`
-- `http://127.0.0.1:4173/records.html`
+- `http://127.0.0.1:4173/post.html`
 
-## Current structure
+## Active pages
 
-- `index.html`: home dashboard
-- `records.html`: records hub
-- `record.html?space=...`: record space detail
-- `js/site-data.js`: editable content data for categories and entries
-- `js/site-app.js`: rendering logic
-- `css/site.css`: redesign styles
-- `docs/private-deployment.md`: private hosting notes
+- `index.html`: Korean about page
+- `post.html`: Korean project list
+- `post1.html`: Korean project detail
+- `index_ja.html`: Japanese about page
+- `post_ja.html`: Japanese project list
+- `post1_ja.html`: Japanese project detail
+- `index_score_ja.html`: Japanese academic details
 
-## Adding a new record space
+## Shared assets
 
-Add one more object to the `recordSpaces` array in `js/site-data.js`.
-
-Each space needs:
-
-- `slug`
-- `title`
-- `shortLabel`
-- `description`
-- `cadence`
-- `scope`
-- `prompts`
-- `entries`
-
-## Security note
-
-This is still a static site.
-
-If you want the site to be accessible only to you, do not rely on client-side tricks. Put the final deployment behind a real authentication layer or a private network.
+- `css/portfolio-modern.css`: modern shared styling
+- `js/portfolio.js`: mobile navigation toggle

@@ -3,110 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Private workspace prototype for personal notes, study logs, and development records.">
-  <title>Personal Workspace</title>
-  <link rel="stylesheet" href="css/site.css">
-  <script defer src="js/site-data.js"></script>
-  <script defer src="js/site-app.js"></script>
+  <meta name="description" content="이근민 포트폴리오">
+  <title>Lee Geunmin | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="css/portfolio-modern.css">
+  <script defer src="js/portfolio.js"></script>
 </head>
-<body data-page="home">
-  <div class="site-shell">
-    <header class="topbar">
-      <a class="brand" href="index.html">
-        <span class="brand-mark">GM</span>
-        <span class="brand-copy">
-          <strong>Personal Workspace</strong>
-          <small>Private journaling home</small>
-        </span>
-      </a>
-      <nav class="nav">
-        <a class="nav-link is-active" href="index.html">Home</a>
-        <a class="nav-link" href="records.html">Records</a>
-        <a class="nav-link" href="security.html">Security Notes</a>
-      </nav>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand-block">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">LGM</span>
+          <span>
+            <strong>Lee Geunmin</strong>
+            <small>Web Developer Portfolio</small>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" data-nav-toggle>
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="site-nav-wrap" data-nav-panel>
+        <nav class="site-nav">
+          <a class="nav-link is-active" href="index.html">About Me</a>
+          <a class="nav-link" href="post.html">Projects</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="social-links">
+            <a href="https://studyrepo.tistory.com/" aria-label="Blog"><i class="fas fa-book"></i></a>
+            <a href="https://github.com/apt777" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+          <div class="lang-switch">
+            <a class="lang-link is-active" href="index.html">KR</a>
+            <a class="lang-link" href="index_ja.html">JP</a>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <main class="page">
-      <section class="hero panel">
+    <main class="content-shell">
+      <section class="hero-card">
         <div class="hero-copy">
-          <p class="eyebrow">Redesign in progress</p>
-          <h1>이 홈페이지를 공개 포트폴리오가 아니라, 나만 쓰는 기록 허브로 다시 만듭니다.</h1>
-          <p class="lede">
-            예전 템플릿 구조는 걷어내고, 개발 일지와 언어 공부 기록을 쌓는 개인 작업 공간으로
-            개조했습니다. 앞으로 카테고리가 늘어나도 데이터만 추가하면 바로 확장할 수 있게
-            바꿔두었습니다.
+          <p class="eyebrow">About Me</p>
+          <h1>사용자 경험과 구조를 함께 다듬는 개발자 이근민입니다.</h1>
+          <p class="hero-text">
+            웹 프론트엔드와 애플리케이션 개발 경험을 바탕으로, 기능이 동작하는 것에서 그치지 않고
+            흐름과 완성도까지 정리된 결과물을 만드는 데 관심이 있습니다.
           </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="records.html">기록 공간 보기</a>
-            <a class="button button-secondary" href="#security">보안 방향 보기</a>
+          <div class="hero-meta">
+            <span>Birth · 1998.02.10</span>
+            <span>Tel · 010-5122-0365</span>
           </div>
         </div>
         <aside class="hero-aside">
-          <div class="status-card">
-            <p class="status-label">Current mode</p>
-            <p class="status-value">Private-first</p>
-            <p class="status-text">
-              민감한 내용은 이 정적 사이트에 직접 넣지 않고, 인증 게이트 뒤에서만 보이도록 운영하는
-              방향을 기본 전제로 둡니다.
-            </p>
+          <div class="spotlight-card">
+            <p class="spotlight-label">Focus</p>
+            <p class="spotlight-value">Frontend · Web · Growth</p>
+            <p class="spotlight-body">React, JavaScript, Java 기반의 구현 경험을 바탕으로 꾸준히 확장 중입니다.</p>
           </div>
         </aside>
       </section>
 
-      <section class="stats-grid" id="overview-stats"></section>
-
-      <section class="panel section-block">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Spaces</p>
-            <h2>기록 공간</h2>
+      <section class="section-grid">
+        <article class="info-card">
+          <div class="section-heading">
+            <p class="eyebrow">Profile</p>
+            <h2>기본 정보</h2>
           </div>
-          <a class="text-link" href="records.html">전체 보기</a>
-        </div>
-        <div class="space-grid" id="home-spaces"></div>
-      </section>
-
-      <section class="panel section-block">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Operating rules</p>
-            <h2>이 사이트를 쓰는 원칙</h2>
-          </div>
-        </div>
-        <div class="rules-grid">
-          <article class="rule-card">
-            <h3>1. 기록은 짧고 자주</h3>
-            <p>매번 완성된 글을 쓰기보다, 배운 점과 막힌 점을 짧게 남기는 구조로 갑니다.</p>
-          </article>
-          <article class="rule-card">
-            <h3>2. 카테고리는 계속 추가 가능</h3>
-            <p>개발, 영어, 중국어 외에도 독서, 운동, 프로젝트 회고 같은 공간을 쉽게 늘릴 수 있습니다.</p>
-          </article>
-          <article class="rule-card">
-            <h3>3. 민감한 데이터는 분리</h3>
-            <p>정적 HTML은 인증을 직접 처리하지 못하므로, 중요한 기록은 반드시 보호된 배포 환경 뒤에 둡니다.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="panel section-block" id="security">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Security</p>
-            <h2>보안 메모</h2>
-          </div>
-        </div>
-        <div class="security-callout">
-          <p>
-            이 저장소는 정적 사이트라서 코드만으로 "나만 로그인해서 보는 홈페이지"를 완성할 수는 없습니다.
-            진짜 보안은 배포 앞단에서 인증을 강제해야 합니다.
-          </p>
-          <ul class="check-list">
-            <li>정적 파일은 그대로 두고, 배포는 인증 프록시나 사설 네트워크 뒤에 둡니다.</li>
-            <li>GitHub Pages 개인 사이트는 기본적으로 공개 성격이라, 개인 전용 홈페이지 용도에는 맞지 않습니다.</li>
-            <li>실제 배포 전에는 `docs/private-deployment.md` 기준으로 방식을 정하면 됩니다.</li>
+          <ul class="detail-list">
+            <li><strong>Name</strong><span>이근민</span></li>
+            <li><strong>Birth</strong><span>1998. 02. 10</span></li>
+            <li><strong>Tel</strong><span>010 - 5122 - 0365</span></li>
           </ul>
-        </div>
+        </article>
+
+        <article class="info-card info-card-wide">
+          <div class="section-heading">
+            <p class="eyebrow">Education & Others</p>
+            <h2>학력 및 이력</h2>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-date">2014.03 - 2016.02</span>
+              <p>도원고등학교 졸업</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">2017.03 - 2023.02</span>
+              <p>대구가톨릭대학교 컴퓨터공학부 졸업 · 평점 4.17 / 4.5</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">2018.02 - 2020.01</span>
+              <p>공군 병 785기 만기전역</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section-grid">
+        <article class="info-card">
+          <div class="section-heading">
+            <p class="eyebrow">License & Skill</p>
+            <h2>자격 및 어학</h2>
+          </div>
+          <ul class="badge-list">
+            <li>정보처리기사 · 2022.09</li>
+            <li>JLPT N2 · 2022.08</li>
+            <li>TOEIC SPEAKING IM2 · 2022.11</li>
+            <li>TOEIC 810 · 2023.10</li>
+          </ul>
+        </article>
+
+        <article class="info-card info-card-wide">
+          <div class="section-heading">
+            <p class="eyebrow">Programming</p>
+            <h2>기술 스택</h2>
+          </div>
+          <div class="skill-columns">
+            <div>
+              <h3>Languages</h3>
+              <p>C / C++<br>Java<br>JavaScript / HTML / CSS / XML</p>
+            </div>
+            <div>
+              <h3>Frameworks</h3>
+              <p>React<br>Linux</p>
+            </div>
+            <div>
+              <h3>Tools</h3>
+              <p>Git / GitHub<br>Slack<br>VS Code</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="footer-note">
+        <span>Creative · Design · Business</span>
+        <span>Updated · 2024.01.26</span>
       </section>
     </main>
   </div>

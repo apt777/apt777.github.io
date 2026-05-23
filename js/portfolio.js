@@ -1,0 +1,13 @@
+document.addEventListener("DOMContentLoaded", function () {
+  var toggle = document.querySelector("[data-nav-toggle]");
+  var header = document.querySelector(".site-header");
+
+  if (!toggle || !header) {
+    return;
+  }
+
+  toggle.addEventListener("click", function () {
+    var isOpen = header.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  });
+});

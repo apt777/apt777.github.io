@@ -1,107 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lee Geunmin</title>
-	<link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
-	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/templatemo-xtra-blog.css" rel="stylesheet">
-<!--
-    
-TemplateMo 553 Xtra Blog
-
-https://templatemo.com/tm-553-xtra-blog
-
--->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="セモファーム プロジェクト詳細">
+  <title>Semo Farm | Lee Geunmin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="css/portfolio-modern.css">
+  <script defer src="js/portfolio.js"></script>
 </head>
 <body>
-	<header class="tm-header" id="tm-header">
-        <div class="tm-header-wrapper">
-            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="tm-site-header">
-                <h1 class="text-center">イ</h1>
-            </div>
-            <nav class="tm-nav" id="tm-nav">            
-                <ul>
-                    <li class="tm-nav-item"><a href="index_ja.html" class="tm-nav-link">
-                        <i class="fas fa-home"></i>
-                        自己紹介
-                    </a></li>
-                    <li class="tm-nav-item active"><a href="post_ja.html" class="tm-nav-link">
-                        <i class="fas fa-pen"></i>
-                        プロジェクト
-                    </a></li>
-                </ul>
-            </nav>
-            <div class="tm-mb-65">
-                <a href="https://studyrepo.tistory.com/" class="tm-social-link">
-                    <i class="fas fa-book tm-social-icon"></i>
-                </a>
-                <a href="https://github.com/apt777" class="tm-social-link">
-                    <i class="fab fa-github tm-social-icon"></i>
-                </a>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand-block">
+        <a class="brand" href="index_ja.html">
+          <span class="brand-mark">LGM</span>
+          <span>
+            <strong>Lee Geunmin</strong>
+            <small>Web Developer Portfolio</small>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" data-nav-toggle>
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
 
-            </div>
-            <li class="tm-nav-language"><a href="post1.html" class="tm-nav-language-link">
-                한국어
-            </a></li>
-            <li class="tm-nav-language"><a href="post1_ja.html" class="tm-nav-language-link">
-                日本語
-            </a></li>
+      <div class="site-nav-wrap" data-nav-panel>
+        <nav class="site-nav">
+          <a class="nav-link" href="index_ja.html">About Me</a>
+          <a class="nav-link is-active" href="post_ja.html">Projects</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="social-links">
+            <a href="https://studyrepo.tistory.com/" aria-label="Blog"><i class="fas fa-book"></i></a>
+            <a href="https://github.com/apt777" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+          <div class="lang-switch">
+            <a class="lang-link" href="post1.html">KR</a>
+            <a class="lang-link is-active" href="post1_ja.html">JP</a>
+          </div>
         </div>
+      </div>
     </header>
-    <div class="container-fluid">
-        <main class="tm-main">          
-            <div class="row tm-row">
-                <div class="col-12">
-                    <hr class="tm-hr-primary tm-mb-55">               
-                </div>
-                <div class="col-lg-4" style="padding-right: 50px;">
-                    <video width="500" height="auto" controls class="tm-mb-40" style="max-width: 100%;">
-                        <source src="video/Semo_demo.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="col-lg-8">
-                    <div class="tm-post-full">                    
-                        <div class="mb-4">
-                            <h2 class="pt-2 tm-color-primary tm-post-title">セモファーム</h2>
-                            商人の農産物取引のためのアプリです。<br>
-                            私はフロントエンドの作業を担当し、残りのチームメンバーはバックエンドの作業を担当しました。<br>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <br>
-            <div class="col-lg-12">
-                <div class="tm-post-full">                    
-                    <div class="mb-4">
-                        <h2 class="pt-2 tm-color-primary tm-post-title">ディテール</h2>
-                        1. ログインページでは、Googleアカウントを使用して簡単にログインできるようになっています。<br>
-                           これにより、セキュリティが向上し、利用者が簡単にアプリにアクセスできます。<br>
-                        2. メイン ページの情報はデータベースから取得されました。<br>
-                        3. 3番目のページでは、KAMISのOpen-APIを使用して現在の農産物の相場を確認できます。<br>
-                        * KAMIS : Korea Agricultural Marketing Information Service
+    <main class="content-shell">
+      <section class="detail-hero">
+        <div class="media-card">
+          <video controls preload="metadata">
+            <source src="video/Semo_demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
 
-                    </div>
-                </div>
-                <a href="https://github.com/apt777/semo0530v2" class="tm-social-link-post">
-                    <i class="fab fa-github tm-social-icon-post"></i>
-                </a>
-            </div>
-            <div>
-                <hr>
-                <span class="d-block text-right tm-color-primary">Creative . Design . Business<br> update : 2024.01.26</span>
-            </div>
-            
-        </main>
-    </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/templatemo-script.js"></script>
+        <div class="detail-summary">
+          <p class="eyebrow">Project Detail</p>
+          <h1>セモファーム</h1>
+          <p>農産物取引のためのアプリケーションです。</p>
+          <div class="tag-row">
+            <span>Android Studio</span>
+            <span>Firebase</span>
+            <span>Java</span>
+            <span>4人チーム</span>
+          </div>
+          <a class="project-link" href="https://github.com/apt777/semo0530v2">
+            <i class="fab fa-github"></i>
+            GitHub Repository
+          </a>
+        </div>
+      </section>
+
+      <section class="section-grid detail-grid">
+        <article class="info-card">
+          <div class="section-heading">
+            <p class="eyebrow">Overview</p>
+            <h2>プロジェクト概要</h2>
+          </div>
+          <p class="body-copy">
+            セモファームは農産物取引のためのモバイルアプリケーションで、利用者がより簡単に情報へアクセスできるように構成したプロジェクトです。
+          </p>
+        </article>
+
+        <article class="info-card">
+          <div class="section-heading">
+            <p class="eyebrow">Role</p>
+            <h2>担当内容</h2>
+          </div>
+          <p class="body-copy">
+            私はフロントエンド作業を担当し、残りのチームメンバーはバックエンド作業を担当しました。
+          </p>
+        </article>
+      </section>
+
+      <section class="info-card">
+        <div class="section-heading">
+          <p class="eyebrow">Highlights</p>
+          <h2>詳細ポイント</h2>
+        </div>
+        <div class="highlight-list">
+          <article>
+            <h3>ログインページ</h3>
+            <p>Google アカウントを使って簡単にログインできるようにし、利便性とセキュリティを高めました。</p>
+          </article>
+          <article>
+            <h3>データベース連携</h3>
+            <p>メインページの情報はデータベースから取得する構成にしました。</p>
+          </article>
+          <article>
+            <h3>価格確認機能</h3>
+            <p>KAMIS Open API を利用して現在の農産物相場を確認できます。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="footer-note">
+        <span>Creative · Design · Business</span>
+        <span>Updated · 2024.01.26</span>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
